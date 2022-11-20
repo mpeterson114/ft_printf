@@ -4,6 +4,7 @@ LIBFT_PATH = ./libft
 LIBFT = $(LIBFT_PATH)/libft.a
 
 SRCS = ./srcs/ft_char_format.c \
+	./srcs/ft_decimal_format.c \
 	#ft_strlcpy.c\
 	
 	
@@ -29,7 +30,7 @@ REMOVE = rm -f
 %.o: %c
 	$(CC) $(CFLAGS) -c $<
 
-all: $(NAME) $(LIBFT)
+all: $(LIBFT) $(NAME)
 
 $(LIBFT):
 	make -C $(LIBFT_PATH)

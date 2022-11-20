@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char_format.c                                   :+:      :+:    :+:   */
+/*   ft_decimal_format.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 18:26:29 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/11/20 20:48:21 by mpeterso         ###   ########.fr       */
+/*   Created: 2022/11/20 20:01:52 by mpeterso          #+#    #+#             */
+/*   Updated: 2022/11/20 20:37:22 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-/*prints a single character*/
-
-int ft_char_format(char c)
+int ft_decimal_format(int n)
 {
     int i;
 
     i = 0;
-    ft_putchar_fd(c, 1);
+    ft_putnbr_fd(n, 1);
     return(i + 1);
 }
 
-/*int main()
+int main()
 {
-    char c = 'x';
-    printf("%c", ft_char_format(c));
-    return 0;
-}*/
+    int n = 34784932;
+    printf("%d", ft_decimal_format(n));
+    return (0);
+}

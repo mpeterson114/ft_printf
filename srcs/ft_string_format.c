@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_char_format.c                                   :+:      :+:    :+:   */
+/*   ft_string_format.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/20 18:26:29 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/11/20 20:48:21 by mpeterso         ###   ########.fr       */
+/*   Created: 2022/11/20 20:33:04 by mpeterso          #+#    #+#             */
+/*   Updated: 2022/11/20 20:58:25 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-/*prints a single character*/
+int ft_putchar(char c)
+{
+    write(1, &c, 1);
+    return (1);
+}
 
-int ft_char_format(char c)
+int ft_string_format(char *str)
 {
     int i;
 
     i = 0;
-    ft_putchar_fd(c, 1);
-    return(i + 1);
+    while (str[i] != '\0')
+        ft_putchar(str[i]);
+        i++;
+    return(i);
 }
 
-/*int main()
+int main()
 {
-    char c = 'x';
-    printf("%c", ft_char_format(c));
-    return 0;
-}*/
+    char str[] = "sup bro";
+    printf("%d", ft_string_format(str));
+    return (0);
+}
