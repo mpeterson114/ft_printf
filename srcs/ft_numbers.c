@@ -62,6 +62,11 @@ int ft_unsigned(int nb)
     return (len);
 }
 
+int ft_hex(int nb)
+{
+    
+}
+
 /*int main ()
 {
     int nb = 38494738;
