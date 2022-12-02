@@ -7,7 +7,7 @@ int    ft_putchar(char c)
     int i;
 
     i = 0;
-    write(1, &c, 1);
+    ft_putchar_fd(c, 1);
     return (i + 1);
 }
 
@@ -17,20 +17,16 @@ int    ft_putstr(char *str)
     int i;
 
     i = 0;
-    if (!str)
-        ft_putstr("(null)");
+    if (!*str)
         return (6);
     while (str[i] != '\0')
     {
-        ft_putchar(str[i]);
-        i++;
+        i = i + ft_putchar(str[i]);
     }
     return (i);
 }
 
-/*int main()
+int main()
 {
-    char str[] = "wxyz";
-    printf("%d", ft_putstr(str));
-    return 0;
-}*/
+    printf("%d", ft_putchar('x'));
+    return 0;}

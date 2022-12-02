@@ -3,9 +3,8 @@ NAME = libftprintf.a
 LIBFT_PATH = ./libft
 LIBFT = $(LIBFT_PATH)/libft.a
 
-SRCS = ./srcs/ft_char_format.c \
-	./srcs/ft_decimal_format.c \
-	#ft_strlcpy.c\
+SRCS = ./srcs/ft_words.c \
+	./srcs/ft_numbers.c \
 	
 	
 OBJS = $(SRCS:.c=.o)

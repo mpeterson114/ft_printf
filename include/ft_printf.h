@@ -6,7 +6,7 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 18:00:06 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/11/20 20:08:26 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/12/02 11:18:17 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,14 @@
 # include "../libft/libft.h"
 
 //int ft_printf(const char *format, ...);
-int ft_char_format(char c);
-int ft_decimal_format(int n);
+int ft_putnbr(int nb);
+int ft_unsigned_len(int nb);
+char    *ft_uitoa(int nb);
+int ft_unsigned(int nb);
+
+int ft_putchar(char c);
+int    ft_putstr(char *str);
+
 
 
 

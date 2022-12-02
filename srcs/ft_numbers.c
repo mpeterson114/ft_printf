@@ -24,7 +24,7 @@ int ft_unsigned_len(int nb)
     while (nb != 0)
     {
         length++;
-        ft_unsigned_len(nb / 10);
+        nb = nb / 10; 
     }
     return (length);
 }
@@ -57,14 +57,14 @@ int ft_unsigned(int nb)
 
     len = 0;
     num = ft_uitoa(nb);
-    len = ft_unsigned_len(num);
+    len = ft_unsigned_len(nb);
     free(num);
     return (len);
 }
 
 int main ()
 {
-    int nb = 7948;
+    int nb = 38494738;
     printf("%u", ft_unsigned(nb));
     return 0;
 }
