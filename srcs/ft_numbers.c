@@ -57,14 +57,14 @@ int ft_unsigned(int nb)
 
     len = 0;
     num = ft_uitoa(nb);
-    len = ft_unsigned_len(nb);
+    len = ft_putstr(num);
     free(num);
     return (len);
 }
 
-int main ()
+/*int main ()
 {
     int nb = 38494738;
     printf("%u", ft_unsigned(nb));
     return 0;
-}
+}*/

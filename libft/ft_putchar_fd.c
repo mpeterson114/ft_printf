@@ -6,16 +6,15 @@
 /*   By: mpeterso <mpeterso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 14:20:17 by mpeterso          #+#    #+#             */
-/*   Updated: 2022/12/02 11:16:42 by mpeterso         ###   ########.fr       */
+/*   Updated: 2022/12/02 12:08:50 by mpeterso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
-	return (1);
 }
 
 /*int main()
