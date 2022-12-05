@@ -1,19 +1,5 @@
 #include "../include/ft_printf.h"
 
-/*decimal or int*/
-int ft_putnbr(int nb)
-{
-    int len;
-    char *num;
-
-    len = 0;
-    num = ft_itoa(nb);
-    len = ft_putstr(num);
-    free(num);
-    return (len);
-}
-
-/*unsigned int*/
 int ft_unsigned_len(int nb)
 {
     int length;
@@ -60,11 +46,6 @@ int ft_unsigned(int nb)
     len = ft_putstr(num);
     free(num);
     return (len);
-}
-
-int ft_hex(int nb)
-{
-    
 }
 
 /*int main ()

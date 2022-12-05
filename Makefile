@@ -4,7 +4,12 @@ LIBFT_PATH = ./libft
 LIBFT = $(LIBFT_PATH)/libft.a
 
 SRCS = ./srcs/ft_words.c \
-	./srcs/ft_numbers.c \
+	./srcs/ft_decimal.c \
+	./srcs/ft_unsigned.c \
+	./srcs/ft_pointer.c \
+	./srcs/ft_hex.c \
+	./srcs/ft_percent.c \
+	./srcs/ft_printf.c \
 	
 	
 OBJS = $(SRCS:.c=.o)

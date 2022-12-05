@@ -8,7 +8,7 @@ int    ft_putchar(char c)
 
     i = 0;
     write(1, &c, 1);
-    return (i + 1);
+    return (1);
 }
 
 /*prints a string*/
@@ -28,5 +28,5 @@ int    ft_putstr(char *str)
 
 /*int main()
 {
-    printf("%d", ft_putstr("xfsfsdf"));
+    printf("%d", ft_putstr("0x"));
     return 0;}*/
