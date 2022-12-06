@@ -18,20 +18,21 @@
 # include "../libft/libft.h"
 
 int ft_putnbr(int nb);
-int ft_unsigned_len(int nb);
-char    *ft_uitoa(int nb);
-int ft_unsigned(int nb);
+int ft_unsigned_len(unsigned int nb);
+char    *ft_uitoa(unsigned int nb);
+int ft_unsigned(unsigned int nb);
 
-int ft_hex_length(unsigned int nb);
-void ft_convert_hex(unsigned int nb, char *base);
-int ft_hex(unsigned int nb, char *base);
+int ft_hex_length(unsigned long long nb);
+void ft_convert_hex(unsigned long long nb, char *base);
+int ft_hex(unsigned long long nb, char *base);
 
 int ft_putchar(char c);
-int    ft_putstr(char *str);
+void ft_putstr(char *str);
+int    ft_printstr(char *str);
 
 int ft_percent();
 
-int ft_pointer(unsigned int nb, char *base);
+int ft_pointer(unsigned long long nb, char *base);
 
 int ft_select_format(va_list args, const char format);
 int ft_printf(const char *str, ...);

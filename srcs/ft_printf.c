@@ -8,7 +8,7 @@ int ft_select_format(va_list args, const char format)
     if (format == 'c')
         i += ft_putchar(va_arg(args, int));
     if (format == 's')
-        i += ft_putstr(va_arg(args, char *));
+        i += ft_printstr(va_arg(args, char *));
     if (format == 'd' || format == 'i')
         i += ft_putnbr(va_arg(args, int));
     if (format == 'u')
@@ -44,12 +44,13 @@ int ft_printf(const char *str, ...)
             length += ft_putchar(str[i]);
         i++;
     }
+    va_end(args);
     return (length);
 }
 
 /*int main()
 {
-    char str[] = "Megan";
+    char str[] = "";
     int x = -31;
     void *ptr = &x;
     unsigned int z = 2380;

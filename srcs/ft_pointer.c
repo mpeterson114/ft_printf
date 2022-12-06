@@ -1,16 +1,17 @@
 #include "../include/ft_printf.h"
 
-int ft_pointer(unsigned int nb, char *base)
+/*prints pointer's address in hexadecimal format plus the prefix string "Ox" and its total length*/
+int ft_pointer(unsigned long long nb, char *base)
 {
     int i;
 
-    i = ft_putstr("0x") + ft_hex(nb, base);
+    i = ft_printstr("0x") + ft_hex(nb, base);
     return (i);
 }
 
 /*int main()
 {
-    unsigned int nb = 7389;
+    long long nb = ;
     printf("%i", ft_pointer(nb, "0123456789abcdef"));
     return 0;
 }*/

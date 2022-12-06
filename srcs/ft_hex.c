@@ -1,6 +1,7 @@
 #include "../include/ft_printf.h"
 
-int ft_hex_length(unsigned int nb)
+/*get length of number*/
+int ft_hex_length(unsigned long long nb)
 {
     int len;
 
@@ -15,7 +16,8 @@ int ft_hex_length(unsigned int nb)
     return (len);
 }
 
-void ft_convert_hex(unsigned int nb, char *base)
+/*convert number to hexadecimal format*/
+void ft_convert_hex(unsigned long long nb, char *base)
 {
     if (nb >= 16)
     {
@@ -26,8 +28,8 @@ void ft_convert_hex(unsigned int nb, char *base)
         write(1, &base[nb], 1);
 }
 
-/*prints hexadecimal value and length*/
-int ft_hex(unsigned int nb, char *base)
+/*prints hexadecimal representation of number and its length*/
+int ft_hex(unsigned long long nb, char *base)
 {
     if (nb == 0)
         write(1, "0", 1);

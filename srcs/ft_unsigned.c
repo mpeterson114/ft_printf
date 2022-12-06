@@ -1,6 +1,7 @@
 #include "../include/ft_printf.h"
 
-int ft_unsigned_len(int nb)
+/*get length of unsigned number*/
+int ft_unsigned_len(unsigned int nb)
 {
     int length;
 
@@ -15,7 +16,8 @@ int ft_unsigned_len(int nb)
     return (length);
 }
 
-char    *ft_uitoa(int nb)
+/*convert unsigned number to string to count length*/
+char    *ft_uitoa(unsigned int nb)
 {
 	int	len;
 	char			*num;
@@ -36,14 +38,15 @@ char    *ft_uitoa(int nb)
 	return (num);
 }
 
-int ft_unsigned(int nb)
+/*print unsigned integer and length*/
+int ft_unsigned(unsigned int nb)
 {
     int len;
     char    *num;
 
     len = 0;
     num = ft_uitoa(nb);
-    len = ft_putstr(num);
+    len = ft_printstr(num);
     free(num);
     return (len);
 }
